@@ -140,6 +140,7 @@ export default function CartBag() {
       })
     );
   };
+  console.log("}asdsadsa")
   return (
     <div className={classes.CartBag}>
       {/*Product*/}
