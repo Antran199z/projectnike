@@ -27,7 +27,10 @@ export const NavTitleStyle = styled.div`
     position:fixed;
     z-index:3;
     top:120px;
-    left:-10px;
-    background-color:red;
+    right:300px;
+    /* background-color:red; */
+    width:900px;
+    font-size:20px;
+    color:purple;
   }
 `;

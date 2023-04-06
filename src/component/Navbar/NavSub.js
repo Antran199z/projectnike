@@ -2,6 +2,8 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import SignIn from "./NavmainComponent/signIn";
 import SignUp from "./NavmainComponent/signUp";
+import NavTitle from "./NavmainComponent/navTitle/NavTitle";
+
 export default function NavSub() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -9,7 +11,9 @@ export default function NavSub() {
   return (
     <div>
       <div>
-        {" "}
+        <NavTitle />
+      </div>
+      <div>
         <p onClick={handleOpen}>Sign In</p>
         <SignIn open={open} handleClose={handleClose} />
         <SignUp />

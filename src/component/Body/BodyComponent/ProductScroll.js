@@ -68,7 +68,7 @@ const ProductScroll = () => {
   const classes = useStyles();
   const navigate = useNavigate();
   const data = useSelector((state) => state.reducerURL.data);
-  console.log(data);
+  // console.log(data);
   const isLoading = useSelector((state) => state.reducerURL.isLoading);
   const ListProduct = data.slice(0, 5).map((item, index) => {
     return (

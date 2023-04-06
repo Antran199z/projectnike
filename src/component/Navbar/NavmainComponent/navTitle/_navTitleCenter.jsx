@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NAVBAR_TITLE } from "../../interfaces/_constant";
+import { NAVBAR_TITLE } from "../interfaces/_constant"
 const NavTitleCenter = ({ ...props }) => {
   const header = [
     { id: 1, label: "New & Feature" },
@@ -37,7 +37,7 @@ const NavTitleCenter = ({ ...props }) => {
     }
   };
   return (
-    <div style={{ position: "relative" }}>
+    <div>
       <div className="menu_main">{renderHTML()}</div>
       {showTitle ?
         <ListItem list={list} />
@@ -46,7 +46,7 @@ const NavTitleCenter = ({ ...props }) => {
   );
 };
 const ListItem = ({ ...props }) => {
-  const { listTop, listBottom } = props.list;
+  const { listTop, listBottom } = props;
   const renderList = () => {
     // console.log(listTop.list);
     if (listTop.length > 0) {
