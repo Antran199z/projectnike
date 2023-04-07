@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { functionDetail } from './module/action/action'
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import DetailImage from "../Detail/DetailComponent/DetailImage"
-import DetailSize from './DetailComponent/DetaiSize'
+import DetailSize from '../Detail/DetailComponent/DetaiSize'
 import styled from 'styled-components'
+import DetailImage from '../Detail/DetailComponent/DetailImage'
 const Detail = () => {
     const getData = useSelector(state => state.reducerDetail.detail)
     // console.log(getData)
@@ -32,7 +32,7 @@ const Detail = () => {
     // };
     return (
         <DetailMain>
-            <img className='detail_main' src={getData.img} />
+            {/* <img className='detail_main' src={getData.img} /> */}
             <div>
                 <DetailImage />
             </div>

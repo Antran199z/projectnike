@@ -1,21 +1,28 @@
 import React, { useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import styled from 'styled-components'
 const DetailImage = () => {
     const getImage = useSelector(state => state.reducerDetail.detail)
-    console.log(getImage.imgDetails)
-    const [index, setIndex] = useState(0);
-    const handleMouseEnter = (index) => {
-        setIndex(getImage.imgDetails[index]);
-    };
-    const handleMouseLeave = () => {
-        setIndex("");
-    };
+    // console.log(getImage)
+    const arrDetails = getImage.imgDetails
+    console.log(arrDetails[0])
     return (
         <div>
-            {/* {getImage.imgDetails[index].imgs.map((item, index) => {
+            {/* {arrDetails[0]?.imgs.map((item, index) => {
+                <img
+                    src={item.img}
+                />
             })} */}
         </div>
     )
 }
 
 export default DetailImage
+// const ImgDetail = styled.div`
+//     .detail_{
+//         &child{
+//             width: 100px;
+//             height: 100px;
+//         }
+//     }
+// `

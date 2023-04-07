@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import styled from 'styled-components'
 const DetailSize = () => {
     const getSize = useSelector(state => state.reducerDetail.detail)
-    console.log(getSize.sizes)
+    // console.log(getSize.sizes)
     return (
         <SizeDetail>
             {getSize.sizes ? <div className='size-main'>

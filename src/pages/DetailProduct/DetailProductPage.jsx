@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import ProductDetail from "../../component/ProductDetail/ProductDetail";
 import Detail from "../../component/Detail/Detail";
 const DetailProductPage = () => {
+  // const id = useParams
   return (
     <React.Fragment>
       <CssBaseline />
