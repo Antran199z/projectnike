@@ -1,5 +1,5 @@
 import axios from "axios"
-import { actionDetail } from "../contants/contants"
+import { actionDetail } from "../constant/constant"
 import API from "../../../../Axios/API";
 import { useDispatch } from "react-redux";
 export const functionDetail = () => {
@@ -8,6 +8,8 @@ export const functionDetail = () => {
         try {
             const res = await API(`/product/${id}`, "GET");
             dispatch({ type: actionDetail.GET_DETAIL_PRODUCT, payload: res.data })
+            dispatch({ type: actionDetail.LOADING, payload: true })
+
         } catch (err) {
             console.log(err)
         }

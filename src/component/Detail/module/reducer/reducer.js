@@ -1,7 +1,7 @@
-import { actionDetail } from "../contants/contants"
+import { actionDetail } from "../constant/constant"
 const initialState = {
     detail: {},
-
+    loading: false
 };
 
 const reducerDetail = (state = initialState, action) => {
@@ -10,6 +10,11 @@ const reducerDetail = (state = initialState, action) => {
             return {
                 ...state,
                 detail: action.payload
+            }
+        case actionDetail.LOADING:
+            return {
+                ...state,
+                loading: true
             }
         default:
             return { ...state };

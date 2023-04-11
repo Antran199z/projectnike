@@ -3,7 +3,6 @@ import Homepage from "./pages/Home/Home";
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import DetailProductPage from "./pages/DetailProduct/DetailProductPage";
 import CartPage from "./pages/Cart/cartPage";
-import NavSub from "./component/Navbar/NavSub";
 function App() {
 
   return (

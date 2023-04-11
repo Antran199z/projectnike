@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { functionDetail } from './module/action/action'
+import { functionDetail } from '../Detail/Module/action/action'
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import DetailSize from '../Detail/DetailComponent/DetaiSize'
+import DetailSize from '../Detail/DetailComponent/DetailSize'
 import styled from 'styled-components'
-import DetailImage from '../Detail/DetailComponent/DetailImage'
+import ImgDetail from '../Detail/DetailComponent/ImgDetail'
 const Detail = () => {
     const getData = useSelector(state => state.reducerDetail.detail)
     // console.log(getData)
@@ -32,9 +32,8 @@ const Detail = () => {
     // };
     return (
         <DetailMain>
-            {/* <img className='detail_main' src={getData.img} /> */}
             <div>
-                <DetailImage />
+                <ImgDetail />
             </div>
             <div>
                 <DetailSize />
@@ -45,7 +44,7 @@ const Detail = () => {
 export default Detail
 const DetailMain = styled.div`
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     .detail_{
         &main{
             width: 200px;

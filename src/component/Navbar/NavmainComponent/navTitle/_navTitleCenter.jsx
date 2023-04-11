@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NAVBAR_TITLE } from "../interfaces/_constant"
+import { NAVBAR_TITLE } from "../../NavmainComponent/interfaces/_constant"
 const NavTitleCenter = ({ ...props }) => {
   const header = [
     { id: 1, label: "New & Feature" },
@@ -23,14 +23,16 @@ const NavTitleCenter = ({ ...props }) => {
     if (header) {
       return header.map((item, i) => {
         return (
-          <div
-            // style={{ marginRight: "60px" }}
-            key={item.id}
-            className="nav-title-list-header"
-            onMouseEnter={() => handleMouseEnter(i)}
-            onMouseLeave={handleMouseLeave}
-          >
-            <span>{item.label}</span>
+          <div className="nav-title-list-header_hover">
+            <div
+              // style={{ marginRight: "60px" }}
+              key={item.id}
+              className="nav-title-list-header"
+              onMouseEnter={() => handleMouseEnter(i)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <span>{item.label}</span>
+            </div>
           </div>
         );
       });
@@ -46,11 +48,10 @@ const NavTitleCenter = ({ ...props }) => {
   );
 };
 const ListItem = ({ ...props }) => {
-  const { listTop, listBottom } = props;
+  const { listTop, listBottom } = props.list;
   const renderList = () => {
-    // console.log(listTop.list);
-    if (listTop.length > 0) {
-      return listTop.map((item, index) => {
+    if (listTop?.length > 0) {
+      return listTop?.map((item, index) => {
         return (
           <div key={index}>
             <h4>{item.title}</h4>
@@ -63,8 +64,8 @@ const ListItem = ({ ...props }) => {
     }
   };
   const renderBottom = () => {
-    if (listBottom.length > 0) {
-      return listBottom.map((item, index) => {
+    if (listBottom?.length > 0) {
+      return listBottom?.map((item, index) => {
         return (
           <div key={index}>
             <h4>{item.title}</h4>
@@ -77,11 +78,13 @@ const ListItem = ({ ...props }) => {
     }
   }
   return (
-    <div className="menu_main_body">
-      <div className="menu_title">{renderList()}</div>
-      {listBottom.length > 0 ? <div className="menu_title">
-        {renderBottom()}
-      </div> : ""}
+    <div class="bird">
+      <div className="menu_main_body">
+        <div className="menu_title">{renderList()}</div>
+        {listBottom?.length > 0 ? <div className="menu_title">
+          {renderBottom()}
+        </div> : ""}
+      </div>
     </div>
   )
 };

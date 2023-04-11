@@ -11,17 +11,15 @@ export default function NavSub() {
   return (
     <div>
       <div>
-        <NavTitle />
-      </div>
-      <div>
+        <div>
+          <NavTitle />
+        </div>
         <p onClick={handleOpen}>Sign In</p>
         <SignIn open={open} handleClose={handleClose} />
         <SignUp />
         <Outlet />
       </div>
-      {/* <div>
-        <NavTitle/>
-      </div> */}
+
     </div>
   );
 }
